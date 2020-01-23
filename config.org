@@ -36,7 +36,7 @@
 	excludesfile = ~/.gitignore
 #+END_SRC
 ** gitignore
-#+BEGIN_SRC conf toggle: ~/.gitignore
+#+BEGIN_SRC conf :tangle ~/.gitignore
 # Compiled source #
 ###################
 *.com
@@ -77,6 +77,10 @@ Thumbs.db
 *.lock
 #+END_SRC
 ** xonsh
+#+BEGIN_SRC python :tangle ~/.xonshrc
+aliases["p"]='proxychains'
+$PATH.append('~/.emacs.d/bin')
+#+END_SRC
 ** rime
 some useful posts:
 - https://gist.github.com/merrickluo/553f39c131d0eb717cd59f72c9d4b60d
