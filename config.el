@@ -29,7 +29,7 @@
 ;;; UI
 
 ;; In case we use this config on a system without these fonts, fail silently
-(setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
+(setq doom-font (font-spec :family "monospace" :size 22 :weight 'semi-light)
       doom-variable-pitch-font (font-spec :family "sans"))
 
 ;;; Frames/Windows
