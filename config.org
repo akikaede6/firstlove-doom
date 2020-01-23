@@ -95,7 +95,7 @@ patch:
     - schema: luna_pinyin_simp
 #+END_SRC
 ** xmoad
-#+BEGIN_SRC conf :tangle ~/.xmonad/xmonad.hs~
+#+BEGIN_SRC conf :tangle ~/.xmonad/xmonad.hs
 import qualified XMonad.StackSet as W
 import XMonad.Actions.UpdateFocus
 import XMonad.Util.EZConfig
@@ -118,7 +118,7 @@ myKeys =
     ]
     ++
     [ (mask ++ "M-" ++ [key], screenWorkspace scr >>= flip whenJust (windows . action))
-         | (key, scr)  <- zip "weruio" [1,2,0,1,2,0] -- was [0..] *** change to match your screen order ***
+         | (key, scr)  <- zip "weruio" [2,0,1,2,0,1] -- was [0..] *** change to match your screen order ***
          , (action, mask) <- [ (W.view, "") , (W.shift, "S-")]
     ]
 #+END_SRC
