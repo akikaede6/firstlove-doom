@@ -66,9 +66,9 @@
       magit-save-repository-buffers nil
       ;; Don't restore the wconf after quitting magit
       magit-inhibit-save-previous-winconf t
-      transient-values '((magit-commit "--gpg-sign=36C0408D9018BC84E5435A180E271AE90CF21E77")
-                         (magit-rebase "--autosquash" "--gpg-sign=36C0408D9018BC84E5435A180E271AE90CF21E77")
-                         (magit-pull "--rebase" "--gpg-sign=36C0408D9018BC84E5435A180E271AE90CF21E77")))
+      transient-values '((magit-commit "--gpg-sign=0E271AE90CF21E77 ")
+                         (magit-rebase "--autosquash" "--gpg-sign=0E271AE90CF21E77")
+                         (magit-pull "--rebase" "--gpg-sign=0E271AE90CF21E77")))
 
 ;;; :lang org
 (setq org-directory "~/projects/org/"
@@ -105,4 +105,7 @@
   (setq pyim-default-scheme 'rime)
   (setq pyim-page-length 9)
   (setq pyim-page-tooltip 'posframe)
+  )
+
+(after! ccls
   )
