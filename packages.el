@@ -9,3 +9,11 @@
 ;; For personal modeline
 (package! anzu)
 (package! evil-anzu)
+(package! posframe)
+
+(package! liberime-config
+  :recipe
+  (
+   :host github
+   :repo "merrickluo/liberime"
+   :files ("CMakeLists.txt" "Makefile" "src" "liberime-config.el")))

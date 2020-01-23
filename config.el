@@ -78,12 +78,31 @@
 (after! org
   (add-to-list 'org-modules 'org-habit t))
 
+;;
+;;; config
 (defun dotfiles-hook ()
-         "If the current buffer is '~/.dotfiles.org' the code-blocks are
+  "If the current buffer is '~/.dotfiles.org' the code-blocks are
        tangled."
-         (when (equal (buffer-file-name)
-                      (expand-file-name (concat doom-private-dir
-                                        "/config.org")))
-           (org-babel-tangle)))
+  (when (equal (buffer-file-name)
+               (expand-file-name (concat doom-private-dir
+                                         "/config.org")))
+    (org-babel-tangle)))
 
-       (add-hook 'after-save-hook 'dotfiles-hook)
+(add-hook 'after-save-hook 'dotfiles-hook)
+
+(use-package! liberime-config
+  :init
+  (add-hook 'liberime-after-start-hook
+            (lambda ()
+              (liberime-select-schema "luna_pinyin_simp")))
+  )
+
+
+(use-package pyim
+  :after liberime-config
+  :config
+  (setq default-input-method "pyim")
+  (setq pyim-default-scheme 'rime)
+  (setq pyim-page-length 9)
+  (setq pyim-page-tooltip 'posframe)
+  )

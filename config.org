@@ -25,3 +25,17 @@
 #+BEGIN_SRC conf :tangle ~/.tmux.conf
 #+END_SRC
 ** gitconfig
+** xonsh
+** rime
+some useful posts:
+- https://gist.github.com/merrickluo/553f39c131d0eb717cd59f72c9d4b60d
+- https://github.com/rime/home/wiki/UserGuide#%E5%90%8C%E6%AD%A5%E7%94%A8%E6%88%B6%E8%B3%87%E6%96%99
+- https://manateelazycat.github.io/emacs/2019/09/12/make-rime-works-with-linux.html
+
+#+BEGIN_SRC conf :tangle ~/.emacs.d/rime/default.custom.yaml
+patch:
+  menu:
+    page_size: 100
+  schema_list:
+    - schema: luna_pinyin_simp
+#+END_SRC
