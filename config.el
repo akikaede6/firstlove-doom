@@ -78,14 +78,12 @@
 (after! org
   (add-to-list 'org-modules 'org-habit t))
 
-(setq chenli/configfile "")
-
 (defun dotfiles-hook ()
          "If the current buffer is '~/.dotfiles.org' the code-blocks are
        tangled."
          (when (equal (buffer-file-name)
-                      (expand-file-name (concat (getenv "HOME")
-                                        "/.dotfiles.org")))
+                      (expand-file-name (concat doom-private-dir
+                                        "/config.org")))
            (org-babel-tangle)))
 
        (add-hook 'after-save-hook 'dotfiles-hook)
