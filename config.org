@@ -25,6 +25,57 @@
 #+BEGIN_SRC conf :tangle ~/.tmux.conf
 #+END_SRC
 ** gitconfig
+#+BEGIN_SRC conf :tangle ~/.gitconfig
+[user]
+	name = Chen Li
+	email = czxyl@protonmail.com
+	username = chenli
+[core]
+	editor = emacs
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore
+#+END_SRC
+** gitignore
+#+BEGIN_SRC conf toggle: ~/.gitignore
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Temporary files #
+###################
+*.swp
+*.swo
+*~
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs #
+######################
+*.log
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+*.lock
+#+END_SRC
 ** xonsh
 ** rime
 some useful posts:
@@ -38,4 +89,32 @@ patch:
     page_size: 100
   schema_list:
     - schema: luna_pinyin_simp
+#+END_SRC
+** xmoad
+#+BEGIN_SRC conf :tangle ~/.xmonad/xmonad.hs~
+import qualified XMonad.StackSet as W
+import XMonad.Actions.UpdateFocus
+import XMonad.Util.EZConfig
+import XMonad
+
+main = do
+  xmonad $ defaultConfig
+    { terminal    = myTerminal
+    , modMask     = myModMask
+    , focusFollowsMouse = False
+    } `additionalKeysP` myKeys
+
+myTerminal    = "deepin-terminal"
+myModMask     = mod4Mask -- Win key or Super_L
+myBorderWidth = 5
+
+myKeys =
+    [
+    -- other additional keys
+    ]
+    ++
+    [ (mask ++ "M-" ++ [key], screenWorkspace scr >>= flip whenJust (windows . action))
+         | (key, scr)  <- zip "weruio" [1,2,0,1,2,0] -- was [0..] *** change to match your screen order ***
+         , (action, mask) <- [ (W.view, "") , (W.shift, "S-")]
+    ]
 #+END_SRC
