@@ -1,0 +1,27 @@
+#+TITLE: config
+** Meta
+     If you place the following code into your emacs init when saving the
+     ~/.dotfiles.org file the dotfiles will all be exported.
+
+#+BEGIN_SRC emacs-lisp :tangle no
+       (defun dotfiles-hook ()
+         "If the current buffer is '~/.dotfiles.org' the code-blocks are
+       tangled."
+         (when (equal (buffer-file-name)
+                      (expand-file-name (concat (getenv "HOME")
+                                        "/.dotfiles.org")))
+           (org-babel-tangle)))
+
+       (add-hook 'after-save-hook 'dotfiles-hook)
+     #+END_SRC
+
+    
+    
+** bashrc
+#+BEGIN_SRC conf :tangle ~/.bashrc
+#+END_SRC
+
+** tmux
+#+BEGIN_SRC conf :tangle ~/.tmux.conf
+#+END_SRC
+** gitconfig
