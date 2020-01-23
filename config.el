@@ -1,7 +1,7 @@
 ;;; ~/.config/doom/config.el -*- lexical-binding: t; -*-
 
-(setq user-full-name "Henrik Lissner"
-      user-mail-address "henrik@lissner.net"
+(setq user-full-name "Chen Li"
+      user-mail-address "czxyl@protonmail.com"
       epa-file-encrypt-to user-mail-address
 
       ;; Line numbers are pretty slow all around. The performance boost of
