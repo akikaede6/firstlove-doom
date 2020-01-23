@@ -66,9 +66,9 @@
       magit-save-repository-buffers nil
       ;; Don't restore the wconf after quitting magit
       magit-inhibit-save-previous-winconf t
-      transient-values '((magit-commit "--gpg-sign=5F6C0EA160557395")
-                         (magit-rebase "--autosquash" "--gpg-sign=5F6C0EA160557395")
-                         (magit-pull "--rebase" "--gpg-sign=5F6C0EA160557395")))
+      transient-values '((magit-commit "--gpg-sign=36C0408D9018BC84E5435A180E271AE90CF21E77")
+                         (magit-rebase "--autosquash" "--gpg-sign=36C0408D9018BC84E5435A180E271AE90CF21E77")
+                         (magit-pull "--rebase" "--gpg-sign=36C0408D9018BC84E5435A180E271AE90CF21E77")))
 
 ;;; :lang org
 (setq org-directory "~/projects/org/"
@@ -77,3 +77,15 @@
       org-bullets-bullet-list '("☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷" "☷" "☷" "☷"))
 (after! org
   (add-to-list 'org-modules 'org-habit t))
+
+(setq chenli/configfile "")
+
+(defun dotfiles-hook ()
+         "If the current buffer is '~/.dotfiles.org' the code-blocks are
+       tangled."
+         (when (equal (buffer-file-name)
+                      (expand-file-name (concat (getenv "HOME")
+                                        "/.dotfiles.org")))
+           (org-babel-tangle)))
+
+       (add-hook 'after-save-hook 'dotfiles-hook)
