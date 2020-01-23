@@ -27,7 +27,7 @@
 ** gitconfig
 #+BEGIN_SRC conf :tangle ~/.gitconfig
 [user]
-	name = Chen Li
+	name = chenli
 	email = czxyl@protonmail.com
 	username = chenli
 [core]
