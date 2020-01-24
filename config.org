@@ -39,33 +39,33 @@
 #+BEGIN_SRC conf :tangle ~/.gitignore
 # Compiled source #
 ###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+,*.com
+,*.class
+,*.dll
+,*.exe
+,*.o
+,*.so
 
 # Temporary files #
 ###################
-*.swp
-*.swo
-*~
+,*.swp
+,*.swo
+,*~
 
 # Packages #
 ############
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+,*.7z
+,*.dmg
+,*.gz
+,*.iso
+,*.jar
+,*.rar
+,*.tar
+,*.zip
 
 # Logs #
 ######################
-*.log
+,*.log
 
 # OS generated files #
 ######################
@@ -74,7 +74,13 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
-*.lock
+,*.lock
+
+# ccls
+.ccls-cache/
+
+# c/cpp
+*.out
 #+END_SRC
 ** xonsh
 #+BEGIN_SRC python :tangle ~/.xonshrc
