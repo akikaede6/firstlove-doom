@@ -134,3 +134,6 @@
                  "* TODO Review %a\n%U\n%:initial\n" :prepend t))
   (setq org-protocol-default-template-key "w")
   )
+
+(after! deft
+  (setq deft-directory (expand-file-name "deft/" org-directory)))

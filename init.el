@@ -7,7 +7,7 @@
        ;;ido
 
        :ui
-       ;;deft
+       deft
        doom
        doom-dashboard
        ;;doom-quit
@@ -114,7 +114,7 @@
        ;;nim
        nix
        ;;ocaml
-       (org +present +procotol +journal)
+       (org +present +procotol +journal +brian)
        ;;perl
        ;;php
        ;;plantuml
