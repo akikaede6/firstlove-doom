@@ -127,3 +127,13 @@ myKeys =
 #!/bin/sh
 xrandr --output DisplayPort-1 --mode 3840x2160 --pos 0x0 --rotate left --output DisplayPort-0 --mode 3840x2160 --pos 6000x0 --rotate left --output DisplayPort-2 --primary --mode 3840x2160 --pos 2160x1520 --rotate normal --output DVI-D-0 --off --output HDMI-A-0 --off
 #+END_SRC
+** org-protocol
+#+BEGIN_SRC conf :tangle ~/.local/share/applications/org-protocol.desktop
+[Desktop Entry]
+Name=org-protocol
+Exec=emacsclient -n %u
+Type=Application
+Terminal=false
+Categories=System;
+MimeType=x-scheme-handler/org-protocol;
+#+END_SRC

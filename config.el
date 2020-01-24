@@ -75,8 +75,6 @@
       org-archive-location (concat org-directory "archive/%s::")
       org-ellipsis " ▼ "
       org-bullets-bullet-list '("☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷" "☷" "☷" "☷"))
-(after! org
-  (add-to-list 'org-modules 'org-habit t))
 
 ;;
 ;;; config
@@ -122,7 +120,17 @@
 
 (after! lsp-mode
   (setq lsp-auto-guess-root t lsp-eldoc-prefer-signature-help nil)
-  (setq lsp-enable-links nil)
+  ;; (setq lsp-enable-links nil)
   (setq lsp-enable-file-watchers nil)
   (setq lsp-keep-workspace-alive nil)
+  )
+
+(add-to-list 'org-modules 'org-protocol t)
+
+(use-package! org-protocol
+  :config
+  (add-to-list 'org-capture-templates
+               '("w" "org-protocol" entry (file "~/org/refile.org")
+                 "* TODO Review %a\n%U\n%:initial\n" :prepend t))
+  (setq org-protocol-default-template-key "w")
   )

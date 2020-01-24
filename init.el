@@ -114,7 +114,7 @@
        ;;nim
        nix
        ;;ocaml
-       (org +present +journal)
+       (org +present +procotol +journal)
        ;;perl
        ;;php
        ;;plantuml
