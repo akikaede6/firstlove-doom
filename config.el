@@ -130,8 +130,8 @@
 (use-package! org-protocol
   :config
   (add-to-list 'org-capture-templates
-               '("w" "org-protocol" entry (file "~/org/refile.org")
-                 "* TODO Review %a\n%U\n%:initial\n" :prepend t))
+               '("w" "org-protocol" entry (file "~/projects/org/refile.org")
+                 "* TODO Review %a\n%U\n%:initial\n" :immediate-finish t))
   (setq org-protocol-default-template-key "w")
   )
 
