@@ -128,6 +128,16 @@ myKeys =
 xrandr --output DisplayPort-1 --mode 3840x2160 --pos 0x0 --rotate left --output DisplayPort-0 --mode 3840x2160 --pos 6000x0 --rotate left --output DisplayPort-2 --primary --mode 3840x2160 --pos 2160x1520 --rotate normal --output DVI-D-0 --off --output HDMI-A-0 --off
 #+END_SRC
 ** org-protocol
+*** test
+after setting protocol in emacs correctly, use emacsclient to test:
+#+BEGIN_SRC
+emacsclient -n "org-protocol:///capture?url=http%3a%2f%2fduckduckgo%2ecom&title=DuckDuckGo"
+#+END_SRC
+*** firefox
+#+BEGIN_SRC
+add the following location in a firefox bookmark:
+javascript:location.href="org-protocol:///capture?url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent(document.title||"[untitled page]")
+#+END_SRC
 #+BEGIN_SRC conf :tangle ~/.local/share/applications/org-protocol.desktop
 [Desktop Entry]
 Name=org-protocol
@@ -136,4 +146,9 @@ Type=Application
 Terminal=false
 Categories=System;
 MimeType=x-scheme-handler/org-protocol;
+#+END_SRC
+
+*** xmonad
+#+BEGIN_SRC
+update-desktop-database ~/.local/share/applications/
 #+END_SRC
