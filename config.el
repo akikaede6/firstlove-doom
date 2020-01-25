@@ -96,7 +96,7 @@
   )
 
 
-(use-package pyim
+(use-package! pyim
   :after liberime-config
   :config
   (setq default-input-method "pyim")
