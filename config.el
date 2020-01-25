@@ -8,8 +8,8 @@
       ;; disabling them outweighs the utility of always keeping them on.
       display-line-numbers-type nil
 
-      ;; On-demand code completion. I don't often need it.
-      company-idle-delay nil
+      ;; On-demand code completion. I really need it.
+      company-idle-delay 0
 
       ;; lsp-ui-sideline is redundant with eldoc and much more invasive, so
       ;; disable it by default.
@@ -108,7 +108,7 @@
 (use-package! ccls
   :hook ((c-mode-local-vars c-mode c++-mode-local-vars objc-mode-local-vars) . (lambda ()(require'ccls)(lsp)))
   :config
-  ;; (add-hook 'lsp-after-open-hook #'ccls-code-lens-mode)
+  (add-hook 'lsp-after-open-hook #'ccls-code-lens-mode)
   (setq ccls-executable "~/projects/github/ccls/Release/ccls")
   (setq ccls-sem-highlight-method 'overlay)
   (ccls-use-default-rainbow-sem-highlight)
