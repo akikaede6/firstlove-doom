@@ -28,9 +28,8 @@
 ;;
 ;;; UI
 
-;; In case we use this config on a system without these fonts, fail silently
-(setq doom-font (font-spec :family "monospace" :size 22 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "sans"))
+;; TODO: adajust font according to display-pixels-per-inch
+(setq doom-font (font-spec :family "monospace" :size (if (> (x-display-pixel-width) 1600) 22 12) :weight 'semi-light))
 
 ;;; Frames/Windows
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
