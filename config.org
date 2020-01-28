@@ -93,6 +93,7 @@ Thumbs.db
 #+BEGIN_SRC python :tangle ~/.xonshrc
 aliases["p"]='proxychains'
 $PATH.append('~/.emacs.d/bin')
+$CMAKE_GENERATOR = "Ninja"
 #+END_SRC
 ** rime
 some useful posts:
