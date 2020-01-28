@@ -38,12 +38,6 @@
 ;;
 ;;; Keybinds
 
-(map! :leader
-      "h L" #'global-keycast-mode
-      "f t" #'find-in-dotfiles
-      "f T" #'browse-dotfiles)
-
-
 ;;
 ;;; Modules
 
