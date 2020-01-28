@@ -65,9 +65,9 @@
       magit-save-repository-buffers nil
       ;; Don't restore the wconf after quitting magit
       magit-inhibit-save-previous-winconf t
-      ;; transient-values '((magit-commit "--gpg-sign=0E271AE90CF21E77 ")
-      ;;                    (magit-rebase "--autosquash" "--gpg-sign=0E271AE90CF21E77")
-      ;;                    (magit-pull "--rebase" "--gpg-sign=0E271AE90CF21E77"))
+      transient-values '((magit-commit "--gpg-sign=A814p&U$uI0$ ")
+                         (magit-rebase "--autosquash" "--gpg-sign=0E271AE90CF21E77")
+                         (magit-pull "--rebase" "--gpg-sign=0E271AE90CF21E77"))
       )
 
 ;;; :lang org
