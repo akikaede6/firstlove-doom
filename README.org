@@ -111,6 +111,7 @@ patch:
 *** arch/manjaro
 fcitx-im fcitx-configtool fcitx-rime is necessary to use rime in pyim somehow.
 #+BEGIN_SRC
+sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime
 #+END_SRC
 ** xmonad
 #+BEGIN_SRC conf :tangle ~/.xmonad/xmonad.hs
