@@ -22,7 +22,7 @@
 *** arch
 #+BEGIN_SRC
 pacman -S aspell-en
-sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime
+sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime cmake
 #+END_SRC
 ** bashrc
 #+BEGIN_SRC conf :tangle ~/.bashrc
@@ -111,7 +111,7 @@ patch:
 *** arch/manjaro
 fcitx-im fcitx-configtool fcitx-rime is necessary to use rime in pyim somehow.
 #+BEGIN_SRC
-sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime
+sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime cmake
 #+END_SRC
 ** xmonad
 #+BEGIN_SRC conf :tangle ~/.xmonad/xmonad.hs
