@@ -152,8 +152,8 @@ after setting protocol in emacs correctly, use emacsclient to test:
 #+BEGIN_SRC
 emacsclient -n "org-protocol:///capture?url=http%3a%2f%2fduckduckgo%2ecom&title=DuckDuckGo"
 #+END_SRC
-*** firefox
-add the following location in a firefox bookmark:
+*** firefox or chromium
+add the following location in a firefox/chromium bookmark:
 #+BEGIN_SRC
 javascript:location.href="org-protocol:///capture?url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent(document.title||"[untitled page]")
 #+END_SRC
