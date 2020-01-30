@@ -131,3 +131,16 @@
 
 (after! deft
   (setq deft-directory (expand-file-name "deft/" org-directory)))
+
+(defun uos/org-open-other-frame-aux(filename &optional wildcards)
+  (require 'f)
+  (+workspace/new)
+  (find-file filename)
+  (+workspace/rename (f-filename (projectile-project-root filename)))
+  )
+
+(defun uos/org-open-other-workspace ()
+  "jump to new workspace with given file link"
+  (interactive)
+  (let ((org-link-frame-setup (acons 'file 'uos/org-open-other-frame-aux  org-link-frame-setup)))
+    (org-open-at-point)))
