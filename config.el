@@ -137,14 +137,10 @@
   (setq project-name (f-filename (projectile-project-root filename)))
   (if (+workspace-exists-p project-name)
       (+workspace/switch-to project-name)
-      (+workspace/new)
-      (+workspace/rename (f-filename (projectile-project-root filename)))
+    (+workspace/new)
+    (+workspace/rename (f-filename (projectile-project-root filename)))
     )
   (find-file filename)
   )
 
-(defun uos/org-open-other-workspace ()
-  "jump to new workspace with given file link"
-  (interactive)
-  (let ((org-link-frame-setup (acons 'file 'uos/org-open-other-frame-aux  org-link-frame-setup)))
-    (org-open-at-point)))
+(setf (alist-get 'file org-link-frame-setup) 'uos/org-open-other-frame-aux)
