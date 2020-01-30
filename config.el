@@ -132,7 +132,7 @@
 (after! deft
   (setq deft-directory (expand-file-name "deft/" org-directory)))
 
-(defun uos/org-open-other-frame-aux(filename &optional wildcards)
+(defun uos/org-open-other-workspace(filename &optional wildcards)
   (require 'f)
   (setq project-name (f-filename (projectile-project-root filename)))
   (if (+workspace-exists-p project-name)
@@ -143,4 +143,4 @@
   (find-file filename)
   )
 
-(setf (alist-get 'file org-link-frame-setup) 'uos/org-open-other-frame-aux)
+(setf (alist-get 'file org-link-frame-setup) 'uos/org-open-other-workspace)
