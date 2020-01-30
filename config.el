@@ -134,9 +134,13 @@
 
 (defun uos/org-open-other-frame-aux(filename &optional wildcards)
   (require 'f)
-  (+workspace/new)
+  (setq project-name (f-filename (projectile-project-root filename)))
+  (if (+workspace-exists-p project-name)
+      (+workspace/switch-to project-name)
+      (+workspace/new)
+      (+workspace/rename (f-filename (projectile-project-root filename)))
+    )
   (find-file filename)
-  (+workspace/rename (f-filename (projectile-project-root filename)))
   )
 
 (defun uos/org-open-other-workspace ()
