@@ -41,6 +41,8 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime cmake
 	editor = emacs
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore
+[http]
+    proxy = socks5://127.0.0.1:1092
 #+END_SRC
 ** gitignore
 #+BEGIN_SRC conf :tangle ~/.gitignore
