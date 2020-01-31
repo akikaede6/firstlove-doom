@@ -144,3 +144,17 @@
   )
 
 (setf (alist-get 'file org-link-frame-setup) 'uos/org-open-other-workspace)
+
+(use-package! eaf
+  :load-path "~/projects/github/emacs-application-framework"
+  :custom
+  (eaf-find-alternate-file-in-dired t)
+  :config
+  (setq eaf-proxy-type "socks5")
+  (setq eaf-proxy-host "127.0.0.1")
+  (setq eaf-proxy-port "1092")
+  (eaf-bind-key scroll_up "RET" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key scroll_down_page "DEL" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key take_photo "p" eaf-camera-keybinding))
