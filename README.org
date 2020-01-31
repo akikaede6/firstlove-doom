@@ -178,3 +178,8 @@ update-desktop-database ~/.local/share/applications/
 #+BEGIN_SRC
 systemctl enable sshd --now
 #+END_SRC
+*** flash is not loaded
+when watching bilibili, it tells me that i lack flash plugin. This package fix it
+#+BEGIN_SRC
+pepper-flash
+#+END_SRC
