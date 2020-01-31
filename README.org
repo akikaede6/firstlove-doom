@@ -173,3 +173,8 @@ MimeType=x-scheme-handler/org-protocol;
 #+BEGIN_SRC
 update-desktop-database ~/.local/share/applications/
 #+END_SRC
+** eaf
+*** ssh: connect to host localhost port 22: Connection refused
+#+BEGIN_SRC
+systemctl enable sshd --now
+#+END_SRC
