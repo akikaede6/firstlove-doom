@@ -169,3 +169,9 @@
   :init
   (awesome-tab-mode)
   )
+
+(use-package! snails
+  :demand
+  :config
+  (add-to-list 'evil-emacs-state-modes 'snails-mode)
+  )
