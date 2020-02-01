@@ -36,6 +36,8 @@
   (
    :host github
    :repo "manateelazycat/snails"
+   :no-byte-compile t
+   :files ("*")
    ))
 
 (package! awesomeshell
