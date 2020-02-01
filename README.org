@@ -34,13 +34,13 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime cmake
 ** gitconfig
 #+BEGIN_SRC conf :tangle ~/.gitconfig
 [user]
-	name = chenli
-	email = czxyl@protonmail.com
-	username = chenli
+    name = chenli
+    email = czxyl@protonmail.com
+    username = chenli
 [core]
-	editor = emacs
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore
+    editor = emacs
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.gitignore
 [http]
     proxy = socks5://127.0.0.1:1092
 #+END_SRC
@@ -193,7 +193,7 @@ give u a pure emacs:
 
 (require 'use-package)
 (use-package eaf
-  :load-path "~/projects/github/emacs-application-framework"
+  ;; :load-path "~/projects/github/emacs-application-framework"
   :custom
   (eaf-find-alternate-file-in-dired t)
   :config
