@@ -37,6 +37,12 @@
 
 ;;
 ;;; Keybinds
+;; (map! :leader
+;;       "e b b" #'eaf-open-browser
+;;       "e b h" #'find-in-dotfiles
+;;       "e c" #'eaf-open-camera
+;;       "e t" #'eaf-open-terminal)
+
 
 ;;
 ;;; Modules
@@ -146,11 +152,11 @@
 (setf (alist-get 'file org-link-frame-setup) 'uos/org-open-other-workspace)
 
 (use-package! eaf
-  :load-path "~/projects/github/emacs-application-framework"
   :custom
   (eaf-find-alternate-file-in-dired t)
   :config
   (setq eaf-proxy-type "socks5")
+  (add-to-list 'evil-emacs-state-modes 'eaf-mode)
   (setq eaf-proxy-host "127.0.0.1")
   (setq eaf-proxy-port "1092")
   (eaf-bind-key scroll_up "RET" eaf-pdf-viewer-keybinding)
