@@ -22,7 +22,8 @@
   :recipe
   (
    :host github
-   :repo "manateelazycat/emacs-application-framework"))
+   :repo "manateelazycat/emacs-application-framework"
+   :files ("*") ))
 
 (package! awesome-tab
   :recipe
@@ -34,7 +35,8 @@
   :recipe
   (
    :host github
-   :repo "manateelazycat/snails"))
+   :repo "manateelazycat/snails"
+   ))
 
 (package! awesomeshell
   :recipe
@@ -44,3 +46,4 @@
    :repo "manateelazycat/aweshell"))
 
 (package! ccls)
+
