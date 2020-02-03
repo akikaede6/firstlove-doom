@@ -94,6 +94,7 @@
   (setq default-input-method "pyim")
   (setq pyim-default-scheme 'rime)
   (setq pyim-page-length 9)
+  (setq pyim-punctuation-translate-p '(no yes auto))
   (setq pyim-page-tooltip 'posframe)
   )
 
