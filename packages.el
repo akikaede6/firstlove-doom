@@ -48,4 +48,3 @@
    :repo "manateelazycat/aweshell"))
 
 (package! ccls)
-
