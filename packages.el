@@ -48,3 +48,4 @@
    :repo "manateelazycat/aweshell"))
 
 (package! ccls)
+(package! lastpass)

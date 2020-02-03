@@ -145,6 +145,7 @@
 (setf (alist-get 'file org-link-frame-setup) 'uos/org-open-other-workspace)
 
 (use-package! eaf
+  :load-path "~/projects/github/emacs-application-framework"
   :custom
   (eaf-find-alternate-file-in-dired t)
   :config
@@ -172,3 +173,10 @@
 
         (setq lsp-ui-doc-enable 't)
 )
+
+(use-package lastpass
+  :config
+  ;; Set lastpass user
+  (setq lastpass-user "czxyl@@protonmail.com")
+  ;; Enable lastpass custom auth-source
+  (lastpass-auth-source-enable))
