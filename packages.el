@@ -18,13 +18,6 @@
    :repo "merrickluo/liberime"
    :files ("CMakeLists.txt" "Makefile" "src" "liberime-config.el")))
 
-(package! eaf
-  :recipe
-  (
-   :host github
-   :repo "manateelazycat/emacs-application-framework"
-   :files ("*") ))
-
 (package! awesome-tab
   :recipe
   (

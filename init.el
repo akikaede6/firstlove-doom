@@ -139,4 +139,8 @@
        ;;(rss +org)
 
        :config
-       (default +bindings +smartparens))
+       (default +bindings +smartparens)
+
+       :private
+       eaf
+       )
