@@ -30,10 +30,7 @@
 ;;
 ;;; Keybinds
 
-(defconst my-leader "s")
 
-
-;;
 ;;; Modules
 
 ;;; :completion ivy
@@ -154,8 +151,8 @@
   )
 (after! lsp-ui
 
-        (setq lsp-ui-doc-enable 't)
-)
+  (setq lsp-ui-doc-enable 't)
+  )
 
 (use-package lastpass
   :config
