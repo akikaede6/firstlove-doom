@@ -21,7 +21,7 @@
 ;;; UI
 
 ;; TODO: adajust font according to display-pixels-per-inch
-(setq doom-font (font-spec :family "monospace" :size (if (> (x-display-pixel-width) 1600) 22 12) :weight 'semi-light))
+(setq doom-font (font-spec :family "Iosevka" :size (if (> (x-display-pixel-width) 1600) 22 12) :weight 'semi-light))
 
 ;;; Frames/Windows
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
@@ -56,107 +56,9 @@
                          (magit-pull "--rebase" "--gpg-sign=F1715199F9F36BD4"))
       )
 
-;;; :lang org
-(setq org-directory "~/projects/org/"
-      org-archive-location (concat org-directory "archive/%s::")
-      org-ellipsis " ▼ "
-      org-bullets-bullet-list '("☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷" "☷" "☷" "☷"))
 
-;;
-;;; config
-(defun dotfiles-hook ()
-  "If the current buffer is '~/.dotfiles.org' the code-blocks are
-       tangled."
-  (when (equal (buffer-file-name)
-               (expand-file-name (concat doom-private-dir
-                                         "/README.org")))
-    (org-babel-tangle)))
-
-(add-hook 'after-save-hook 'dotfiles-hook)
-
-(use-package! liberime-config
-  :init
-  (add-hook 'liberime-after-start-hook
-            (lambda ()
-              (liberime-select-schema "luna_pinyin_simp")))
-  )
-
-
-(use-package! pyim
-  :after liberime-config
-  :config
-  (setq default-input-method "pyim")
-  (setq pyim-default-scheme 'rime)
-  (setq pyim-page-length 9)
-  (setq pyim-punctuation-translate-p '(no yes auto))
-  (setq pyim-page-tooltip 'posframe)
-  )
-
-(use-package! ccls
-  :hook ((c-mode-local-vars c-mode c++-mode-local-vars objc-mode-local-vars) . (lambda ()(require'ccls)(lsp)))
-  :config
-  (add-hook 'lsp-after-open-hook #'ccls-code-lens-mode)
-  (setq ccls-executable "~/projects/github/ccls/Release/ccls")
-  (setq ccls-sem-highlight-method 'overlay)
-  (ccls-use-default-rainbow-sem-highlight)
-  (evil-set-initial-state 'ccls-tree-mode 'emacs)
-  )
 
 (after! projectile
   (add-to-list 'projectile-globally-ignored-directories ".ccls-cache"))
 
-(after! lsp-mode
-  (setq lsp-auto-guess-root t lsp-eldoc-prefer-signature-help nil)
-  ;; (setq lsp-enable-links nil)
-  (setq lsp-enable-file-watchers nil)
-  (setq lsp-keep-workspace-alive nil)
-  )
 
-(add-to-list 'org-modules 'org-protocol t)
-
-(use-package! org-protocol
-  :config
-  (add-to-list 'org-capture-templates
-               '("w" "org-protocol" entry (file "~/projects/org/refile.org")
-                 "* TODO Review %a\n%U\n%:initial\n" :immediate-finish t))
-  (setq org-protocol-default-template-key "w")
-  )
-
-(after! deft
-  (setq deft-directory (expand-file-name "deft/" org-directory)))
-
-(defun uos/org-open-other-workspace(filename &optional wildcards)
-  (require 'f)
-  (setq project-name (f-filename (projectile-project-root filename)))
-  (if (+workspace-exists-p project-name)
-      (+workspace/switch-to project-name)
-    (+workspace/new)
-    (+workspace/rename (f-filename (projectile-project-root filename)))
-    )
-  (find-file filename)
-  )
-
-(setf (alist-get 'file org-link-frame-setup) 'uos/org-open-other-workspace)
-
-
-(use-package! awesome-tab
-  :init
-  (awesome-tab-mode)
-  )
-
-(use-package! snails
-  :demand
-  :config
-  (add-to-list 'evil-emacs-state-modes 'snails-mode)
-  )
-(after! lsp-ui
-
-  (setq lsp-ui-doc-enable 't)
-  )
-
-(use-package lastpass
-  :config
-  ;; Set lastpass user
-  (setq lastpass-user "czxyl@@protonmail.com")
-  ;; Enable lastpass custom auth-source
-  (lastpass-auth-source-enable))

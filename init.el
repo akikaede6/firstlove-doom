@@ -1,4 +1,4 @@
-;;; ~/.doom.d/init.el -*- lexical-binding: t; -*-
+;; ~/.doom.d/init.el -*- lexical-binding: t; -*-
 
 (doom! :completion
        company
@@ -35,6 +35,7 @@
        japanese
 
        :editor
+       ;; uos-keybinding
        (evil +everywhere)
        file-templates
        fold              ; (nigh) universal code folding
@@ -78,7 +79,7 @@
        ;;macos             ; MacOS-specific commands
        magit             ;
        ;;make              ; run make tasks from Emacs
-       ;;pass                ; password manager for nerds
+       pass                ; password manager for nerds
        pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
@@ -140,7 +141,15 @@
 
        :config
        (default +bindings +smartparens)
-
-       :private
+       dotfiles
+       :lazycat
        eaf
+       awesome-tab
+       snails
+       :mylang
+       cc
+       lsp
+       org
        )
+
+(defvar uos/leader "s")
