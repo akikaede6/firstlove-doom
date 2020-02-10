@@ -61,4 +61,3 @@
 (after! projectile
   (add-to-list 'projectile-globally-ignored-directories ".ccls-cache"))
 
-

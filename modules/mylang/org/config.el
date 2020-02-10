@@ -12,7 +12,7 @@
   (setq deft-directory (expand-file-name "deft/" org-directory)))
 
 
-(setf (alist-get 'file org-link-frame-setup) 'uos/org-open-other-workspace)
+(setf (alist-get 'file org-link-frame-setup) #'uos/org-open-other-workspace)
 
 (add-to-list 'org-modules 'org-protocol t)
 
