@@ -116,7 +116,7 @@ fcitx-im fcitx-configtool fcitx-rime is necessary to use rime in pyim somehow.
 sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime cmake
 #+END_SRC
 ** xmonad
-#+BEGIN_SRC conf :tangle ~/.xmonad/xmonad.hs
+#+BEGIN_SRC conf :tangle ~/.xmonad/xmonad.hs :mkdirp yes
 import qualified XMonad.StackSet as W
 import XMonad.Actions.UpdateFocus
 import XMonad.Util.EZConfig
