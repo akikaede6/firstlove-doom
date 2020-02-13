@@ -34,7 +34,7 @@
 ;;; Modules
 
 ;;; :completion ivy
-(add-to-list 'ivy-re-builders-alist '(counsel-projectile-find-file . ivy--regex-plus))
+;; (add-to-list 'ivy-re-builders-alist '(counsel-projectile-find-file . ivy--regex-plus))
 
 ;;; :ui doom-dashboard
 ;; (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
@@ -61,3 +61,13 @@
 (after! projectile
   (add-to-list 'projectile-globally-ignored-directories ".ccls-cache"))
 
+(setq tramp-inline-compress-start-size 1000000)
+(setq tramp-copy-size-limit 1000000)
+
+(after! lsp-mode
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-tramp-connection "/home/firstlove/projects/github/ccls/build/ccls")
+                    :major-modes '(c++-mode)
+                    :remote? t
+                    :server-id 'ccls-remote))
+  )
