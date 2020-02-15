@@ -1,7 +1,7 @@
 ;;; ~/.config/doom/config.el -*- lexical-binding: t; -*-
 
 (setq user-full-name "Chen Li"
-      user-mail-address "czxyl@protonmail.com"
+      user-mail-address "chenli@uniontech.com"
       epa-file-encrypt-to user-mail-address
 
       ;; Line numbers are pretty slow all around. The performance boost of
@@ -34,7 +34,7 @@
 ;;; Modules
 
 ;;; :completion ivy
-(add-to-list 'ivy-re-builders-alist '(counsel-projectile-find-file . ivy--regex-plus))
+;; (add-to-list 'ivy-re-builders-alist '(counsel-projectile-find-file . ivy--regex-plus))
 
 ;;; :ui doom-dashboard
 ;; (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
@@ -51,13 +51,24 @@
       magit-save-repository-buffers nil
       ;; Don't restore the wconf after quitting magit
       magit-inhibit-save-previous-winconf t
-      transient-values '((magit-commit "--gpg-sign=D08CD75652CBA824")
-                         (magit-rebase "--autosquash" "--gpg-sign=D08CD75652CBA824")
-                         (magit-pull "--rebase" "--gpg-sign=D08CD75652CBA824"))
+      ;; transient-values '((magit-commit "--gpg-sign=859058B499061C01")
+      ;;                    (magit-rebase "--autosquash" "--gpg-sign=859058B499061C01")
+      ;;                    (magit-pull "--rebase" "--gpg-sign=859058B499061C01"))
       )
 
 
 
 (after! projectile
   (add-to-list 'projectile-globally-ignored-directories ".ccls-cache"))
+
+(setq tramp-inline-compress-start-size 10000000000)
+(setq tramp-copy-size-limit 10000000000000000)
+
+(after! lsp-mode
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-tramp-connection "/home/firstlove/projects/github/ccls/build/ccls")
+                    :major-modes '(c++-mode)
+                    :remote? t
+                    :server-id 'ccls-remote))
+  )
 

@@ -1,9 +1,10 @@
 ;; ~/.doom.d/init.el -*- lexical-binding: t; -*-
 
 (doom! :completion
-       company
-       ivy
-       ;;helm
+       (company +childframe)
+       ;; (ivy +fuzzy +prescient +childframe +icons)
+       (ivy +fuzzy +childframe +icons)
+       ;; (helm +icons +fuzzy)
        ;;ido
 
        :ui
@@ -132,7 +133,7 @@
        :email
        ;;(mu4e +gmail)       ; WIP
        ;;notmuch             ; WIP
-       ;;(wanderlust +gmail) ; WIP
+       (wanderlust) ; WIP
 
        :app
        ;;calendar
