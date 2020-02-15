@@ -30,6 +30,10 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime cmake
 
 ** tmux
 #+BEGIN_SRC conf :tangle ~/.tmux.conf
+set-option -g default-shell /usr/bin/xonsh
+set -g default-terminal 'screen-256color'
+set -g default-terminal "tmux-256color"
+set -g history-limit 100000
 #+END_SRC
 ** gitconfig
 #+BEGIN_SRC conf :tangle ~/.gitconfig
