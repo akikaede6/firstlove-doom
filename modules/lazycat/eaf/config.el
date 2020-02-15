@@ -13,6 +13,7 @@
   (eaf-find-alternate-file-in-dired t)
   :config
   (setq eaf-proxy-type "socks5")
+  (eaf-setq eaf-browse-default-zoom "1.5")
   (add-to-list 'evil-emacs-state-modes 'eaf-mode)
   (setq eaf-proxy-host "127.0.0.1")
   (setq eaf-proxy-port "1092")
