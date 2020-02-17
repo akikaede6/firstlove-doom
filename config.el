@@ -61,8 +61,8 @@
 (after! projectile
   (add-to-list 'projectile-globally-ignored-directories ".ccls-cache"))
 
-(setq tramp-inline-compress-start-size 10000000000)
-(setq tramp-copy-size-limit 10000000000000000)
+(setq tramp-inline-compress-start-size nil)
+(setq tramp-copy-size-limit nil)
 
 (after! lsp-mode
   (lsp-register-client
