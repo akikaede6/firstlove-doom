@@ -28,3 +28,13 @@
   (setq org-journal-enable-agenda-integration t)
   (setq org-journal-enable-encryption t)
   )
+
+(map!
+ (
+  :map general-override-mode-map
+  :prefix uos/leader
+  (
+   (:prefix ("n" . "notes")
+     (:prefix ("c" . "en/decrypt")
+       :n      "e" #'org-encrypt-entry
+       :n "d" #'org-decrypt-entry)))))
