@@ -1,11 +1,15 @@
                                         ;-*- lexical-binding: t; -*-
-(map! :prefix uos/leader
-      :map general-override-mode-map
-      :n "ebb" #'eaf-open-browser
-      :n "ebh" #'eaf-open-browser-with-history
-      :n "ec" #'eaf-open-camera
-      :n "et" #'eaf-open-terminal
-      :n "s" #'evil-snipe-s)
+(map!
+ (
+  :map general-override-mode-map
+  :prefix uos/leader
+  (
+   (:prefix ("e" . "eaf")
+     :n "b" #'eaf-open-browser
+     :n "h" #'eaf-open-browser-with-history
+     :n "c" #'eaf-open-camera
+     :n "t" #'eaf-open-terminal)
+   :n "s" #'evil-snipe-s)))
 
 (use-package! eaf
   :load-path "~/projects/github/emacs-application-framework"
