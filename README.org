@@ -76,10 +76,6 @@ set -g history-limit 100000
 ,*.tar
 ,*.zip
 
-# Logs #
-######################
-,*.log
-
 # OS generated files #
 ######################
 .DS_Store*
