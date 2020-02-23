@@ -2,8 +2,7 @@
 
 (doom! :completion
        (company +childframe)
-       ;; (ivy +fuzzy +prescient +childframe +icons)
-       (ivy +fuzzy +childframe +icons)
+       (ivy +childframe +icons)
        ;; (helm +icons +fuzzy)
        ;;ido
 
@@ -17,7 +16,7 @@
        ;;hydra
        ;;indent-guides     ; highlighted indent columns
        (modeline +light)
-       nav-flash
+       ;; nav-flash
        ;;neotree
        ophints
        (popup +all +defaults)
@@ -57,8 +56,8 @@
 
        :term
        eshell            ; a consistent, cross-platform shell (WIP)
-       ;;shell
-       ;;term              ; terminals in Emacs
+       shell
+       term              ; terminals in Emacs
        vterm
 
        :checkers
@@ -97,7 +96,7 @@
        ;;common-lisp
        ;;coq
        data
-       (erlang +lsp)
+       ;;(erlang +lsp)
        ;;elixir
        ;;elm
        emacs-lisp
@@ -107,11 +106,11 @@
        ;;(haskell +dante)
        ;;hy
        ;;(java +lsp)
-       (javascript +lsp)
+       ;;(javascript +lsp)
        ;;julia
        ;;latex
        ;;ledger
-       (lua +moonscript)
+       ;; (lua +moonscript)
        markdown
        ;;nim
        nix
@@ -128,7 +127,7 @@
        ;;scala
        sh
        ;;swift
-       web
+       ;; web
 
        :email
        ;;(mu4e +gmail)       ; WIP
