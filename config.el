@@ -72,3 +72,5 @@
                     :server-id 'ccls-remote))
   )
 
+
+(setenv "SHELL" "/usr/bin/bash")
