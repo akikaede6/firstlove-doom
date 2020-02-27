@@ -128,7 +128,7 @@ main = do
     , focusFollowsMouse = False
     } `additionalKeysP` myKeys
 
-myTerminal    = "deepin-terminal"
+myTerminal    = "alacritty"
 myModMask     = mod4Mask -- Win key or Super_L
 myBorderWidth = 5
 
@@ -239,3 +239,7 @@ tbd2jzwAyRK0VAfv3aLOO6hKSUwONs1ZuRlF2wxcxA+qKBolXQ3FwCSNmAeNEBvS
 kR9iolF4waM=
 =Vd6r
 -----END PGP MESSAGE-----
+** alacritty
+#+BEGIN_SRC conf :tangle ~/.config/alacritty/alacritty.yml :mkdirp yes
+background_opacity: 0.5
+#+END_SRC
