@@ -2,5 +2,5 @@
 
 (use-package! awesome-tab
   :init
-  (awesome-tab-mode)
+  ;; (awesome-tab-mode)
   )
