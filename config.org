@@ -67,7 +67,6 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime
 ,*.iso
 ,*.jar
 ,*.rar
-,*.tar
 ,*.zip
 
 # Logs #
