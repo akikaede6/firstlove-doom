@@ -42,3 +42,5 @@
 
 (package! ccls)
 (package! lastpass)
+(package! ox-mediawiki)
+(package! mediawiki)
