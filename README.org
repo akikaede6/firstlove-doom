@@ -39,7 +39,7 @@ set -g history-limit 100000
 #+BEGIN_SRC conf :tangle ~/.gitconfig
 [user]
     name = chenli
-    email = czxyl@protonmail.com
+    email = chenli@uniontech.com
     username = chenli
 [core]
     editor = emacs
