@@ -26,7 +26,6 @@
   (add-to-list 'org-agenda-files org-journal-dir)
   (setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'")
   (setq org-journal-enable-agenda-integration t)
-  (setq org-journal-enable-encryption t)
   )
 
 (map!
