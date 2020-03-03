@@ -125,7 +125,7 @@ main = do
     , focusFollowsMouse = False
     } `additionalKeysP` myKeys
 
-myTerminal    = "deepin-terminal"
+myTerminal    = "termite"
 myModMask     = mod4Mask -- Win key or Super_L
 myBorderWidth = 5
 
@@ -168,4 +168,9 @@ MimeType=x-scheme-handler/org-protocol;
 *** xmonad
 #+BEGIN_SRC
 update-desktop-database ~/.local/share/applications/
+#+END_SRC
+** xarand
+#+BEGIN_SRC conf :tangle ~/.config/termite/config :mkdirp yes
+[options]
+font = Sarasa Term J 30
 #+END_SRC
