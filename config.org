@@ -125,7 +125,7 @@ main = do
     , focusFollowsMouse = False
     } `additionalKeysP` myKeys
 
-myTerminal    = "termite"
+myTerminal    = "terminology"
 myModMask     = mod4Mask -- Win key or Super_L
 myBorderWidth = 5
 
@@ -173,4 +173,8 @@ update-desktop-database ~/.local/share/applications/
 #+BEGIN_SRC conf :tangle ~/.config/termite/config :mkdirp yes
 [options]
 font = Sarasa Term J 30
+
+[colors]
+background = rgba(63, 63, 63, 0.8)
+
 #+END_SRC
