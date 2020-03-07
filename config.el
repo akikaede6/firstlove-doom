@@ -73,3 +73,6 @@
   )
 
 (setenv "SHELL" "/usr/bin/bash")
+
+
+(modify-syntax-entry ?_ "w")
