@@ -103,7 +103,7 @@
        ;;ess
        ;;faust
        ;;go
-       ;;(haskell +dante)
+       (haskell +lsp)
        ;;hy
        ;;(java +lsp)
        ;;(javascript +lsp)
