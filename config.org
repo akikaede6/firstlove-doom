@@ -93,6 +93,7 @@ Thumbs.db
 aliases["p"]='proxychains'
 $PATH.append('~/.emacs.d/bin')
 $CMAKE_GENERATOR = "Ninja"
+$EDITOR = 'emacs'
 #+END_SRC
 ** rime
 some useful posts:
