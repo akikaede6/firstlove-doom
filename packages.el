@@ -16,7 +16,7 @@
   (
    :host github
    :repo "merrickluo/liberime"
-   :files ("CMakeLists.txt" "Makefile" "src" "liberime-config.el")))
+   :files ("CMakeLists.txt" "Makefile" "src" "*.el")))
 
 (package! awesome-tab
   :recipe

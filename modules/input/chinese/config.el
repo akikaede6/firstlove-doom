@@ -11,6 +11,7 @@
 (use-package! pyim
   :after liberime-config
   :config
+  (require 'liberime)
   (setq default-input-method "pyim")
   (setq pyim-default-scheme 'rime)
   (setq pyim-page-length 9)
