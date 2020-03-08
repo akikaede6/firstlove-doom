@@ -22,7 +22,7 @@
 *** arch
 #+BEGIN_SRC
 pacman -S aspell-en
-sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime cmake
+sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime cmake w3m
 #+END_SRC
 ** bashrc
 #+BEGIN_SRC conf :tangle ~/.bashrc
