@@ -44,3 +44,6 @@
 (package! lastpass)
 (package! ox-mediawiki)
 (package! mediawiki)
+(package! shimbun)
+(package! wanderlust)
+(package! w3m)

@@ -76,3 +76,10 @@
 
 
 (modify-syntax-entry ?_ "w")
+
+(require 'shimbun)
+
+(setq shimbun-rss-hash-group-path-alist
+      '(("xkcd" "https://xkcd.com/rss.xml")
+        ("acgpiping" "http://www.acgpiping.net/feed/")
+        ("moonlight" "http://feed.williamlong.info/")))
