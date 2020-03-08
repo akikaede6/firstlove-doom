@@ -41,7 +41,7 @@
 
          )
         ("firstlove.life"
-         ("Fcc" . "%INBOX.Sent:\"czxyl@firstlove.life\"/clear@mail.privateemail.com")
+         ;; ("Fcc" . "%INBOX.Sent:\"czxyl@firstlove.life\"/clear@mail.privateemail.com")
          (wl-from . "陈力 <chenli@firstlove.com>")
          (wl-smtp-posting-user . "czxyl@firstlove.life")
          (wl-smtp-connection-type 'ssl)
