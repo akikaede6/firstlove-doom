@@ -30,6 +30,7 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime
 
 ** tmux
 #+BEGIN_SRC conf :tangle ~/.tmux.conf
+set-option -g default-shell /usr/bin/xonsh
 #+END_SRC
 ** gitconfig
 #+BEGIN_SRC conf :tangle ~/.gitconfig
