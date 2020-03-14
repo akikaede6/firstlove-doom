@@ -145,6 +145,11 @@ myKeys =
          , (action, mask) <- [ (W.view, "") , (W.shift, "S-")]
     ]
 #+END_SRC
+** xinitrc
+#+BEGIN_SRC :tangle ~/.xinitrc
+unclutter -grab &
+xmonad
+#+END_SRC
 ** xarand
 #+BEGIN_SRC conf :tangle ~/.screenlayout/arandr.sh :mkdirp yes
 #!/bin/sh
