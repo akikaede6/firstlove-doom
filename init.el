@@ -2,7 +2,7 @@
 
 (doom! :completion
        (company +childframe)
-       (ivy +childframe +icons)
+       (ivy +icons)
        ;; (helm +icons +fuzzy)
        ;;ido
 
