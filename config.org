@@ -146,7 +146,9 @@ myKeys =
     ]
 #+END_SRC
 ** xinitrc
-#+BEGIN_SRC :tangle ~/.xinitrc
+#+BEGIN_SRC conf :tangle ~/.xinitrc :mkdirp yes
+bash ~/.screenlayout/arandr.sh
+feh --bg-center ~/Downloads/road-landscape-nature-forest-39811.jpg  ~/Downloads/bird-s-eye-photography-of-mountain-1624496.jpg    ~/Downloads/photography-of-person-walking-on-road-1236701.jpg
 unclutter -grab &
 xmonad
 #+END_SRC
