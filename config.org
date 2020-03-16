@@ -99,6 +99,7 @@ aliases["p"]='proxychains'
 $PATH.append('~/.emacs.d/bin')
 $CMAKE_GENERATOR = "Ninja"
 $EDITOR = 'emacs'
+$XONSH_STORE_STDOUT = True
 #+END_SRC
 ** rime
 some useful posts:
@@ -182,7 +183,7 @@ MimeType=x-scheme-handler/org-protocol;
 #+BEGIN_SRC
 update-desktop-database ~/.local/share/applications/
 #+END_SRC
-** xarand
+** termite
 #+BEGIN_SRC conf :tangle ~/.config/termite/config :mkdirp yes
 [options]
 font = Sarasa Term J 30
