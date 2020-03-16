@@ -72,9 +72,6 @@
                     :server-id 'ccls-remote))
   )
 
-(setenv "SHELL" "/usr/bin/bash")
-
-
 (modify-syntax-entry ?_ "w")
 
 (after! wl
@@ -83,3 +80,5 @@
         ("acgpiping" "http://www.acgpiping.net/feed/")
         ("moonlight" "http://feed.williamlong.info/")))
  )
+
+(setq shell-file-name "/usr/bin/bash")
