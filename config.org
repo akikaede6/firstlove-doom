@@ -21,8 +21,7 @@
 ** presuite
 *** arch
 #+BEGIN_SRC
-pacman -S aspell-en
-sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime
+sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime privoxy aspell-en v2ray
 #+END_SRC
 ** bashrc
 #+BEGIN_SRC conf :tangle ~/.bashrc
@@ -127,13 +126,29 @@ fcitx-im fcitx-configtool fcitx-rime is necessary to use rime in pyim somehow.
 import qualified XMonad.StackSet as W
 import XMonad.Actions.UpdateFocus
 import XMonad.Util.EZConfig
+import XMonad.Hooks.ManageDocks
 import XMonad
+
+myStartupHook :: X()
+myStartupHook = do
+    -- background
+    spawn "bash ~/.screenlayout/arandr.sh"
+    spawn "feh --bg-center ~/Downloads/road-landscape-nature-forest-39811.jpg  ~/Downloads/bird-s-eye-photography-of-mountain-1624496.jpg    ~/Downloads/photography-of-person-walking-on-road-1236701.jpg"
+    -- autocutsel
+    spawn "unclutter -grab &"
+    -- redshift
+    spawn "redshift -l 21:121"
+    -- unclutter
+    spawn "unclutter"
+    -- compositor
+    spawn "picom -b"
 
 main = do
   xmonad $ defaultConfig
     { terminal    = myTerminal
     , modMask     = myModMask
     , focusFollowsMouse = False
+    , startupHook        = myStartupHook <+> docksStartupHook
     } `additionalKeysP` myKeys
 
 myTerminal    = "terminology"
@@ -152,9 +167,9 @@ myKeys =
 #+END_SRC
 ** xinitrc
 #+BEGIN_SRC conf :tangle ~/.xinitrc :mkdirp yes
-bash ~/.screenlayout/arandr.sh
-feh --bg-center ~/Downloads/road-landscape-nature-forest-39811.jpg  ~/Downloads/bird-s-eye-photography-of-mountain-1624496.jpg    ~/Downloads/photography-of-person-walking-on-road-1236701.jpg
-unclutter -grab &
+# bash ~/.screenlayout/arandr.sh
+# feh --bg-center ~/Downloads/road-landscape-nature-forest-39811.jpg  ~/Downloads/bird-s-eye-photography-of-mountain-1624496.jpg    ~/Downloads/photography-of-person-walking-on-road-1236701.jpg
+# unclutter -grab &
 xmonad
 #+END_SRC
 ** xarand
