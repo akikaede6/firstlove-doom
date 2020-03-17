@@ -221,3 +221,9 @@ opacity-rule = [
   "60:class_g = 'URxvt' && !focused"
 ];
 #+END_SRC
+** wget
+#+BEGIN_SRC conf :tangle  ~/.wgetrc :mkdirp yes
+use_proxy=on
+http_proxy=127.0.0.1:8118
+https_proxy=127.0.0.1:8118
+#+END_SRC
