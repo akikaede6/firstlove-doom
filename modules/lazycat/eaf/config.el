@@ -12,7 +12,6 @@
    :n "s" #'evil-snipe-s)))
 
 (use-package! eaf
-  :load-path "~/projects/github/emacs-application-framework"
   :custom
   (eaf-find-alternate-file-in-dired t)
   :config
