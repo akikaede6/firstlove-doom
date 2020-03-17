@@ -20,7 +20,7 @@
 
 ** presuite
 *** arch
-#+BEGIN_SRC
+#+BEGIN_SRC bash
 sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime privoxy aspell-en v2ray
 #+END_SRC
 ** bashrc
@@ -32,7 +32,7 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime privoxy aspell-en v2
 set-option -g default-shell /usr/bin/xonsh
 #+END_SRC
 ** gitconfig
-#+BEGIN_SRC
+#+BEGIN_SRC quote
 firstlove@manjaro ~/projects/github/linux master $ tail /etc/privoxy/config  -n1
 forward-socks5 / 127.0.0.1:1092 .
 #+END_SRC
@@ -119,8 +119,6 @@ patch:
 #+END_SRC
 *** arch/manjaro
 fcitx-im fcitx-configtool fcitx-rime is necessary to use rime in pyim somehow.
-#+BEGIN_SRC
-#+END_SRC
 ** xmonad
 #+BEGIN_SRC conf :tangle ~/.xmonad/xmonad.hs
 import qualified XMonad.StackSet as W
@@ -151,7 +149,7 @@ main = do
     , startupHook        = myStartupHook <+> docksStartupHook
     } `additionalKeysP` myKeys
 
-myTerminal    = "terminology"
+myTerminal    = "konsole"
 myModMask     = mod4Mask -- Win key or Super_L
 myBorderWidth = 5
 
@@ -180,11 +178,11 @@ xrandr --output DisplayPort-1 --mode 3840x2160 --pos 0x0 --rotate left --output 
 ** org-protocol
 *** test
 after setting protocol in emacs correctly, use emacsclient to test:
-#+BEGIN_SRC
+#+BEGIN_SRC conf
 emacsclient -n "org-protocol:///capture?url=http%3a%2f%2fduckduckgo%2ecom&title=DuckDuckGo"
 #+END_SRC
 *** firefox
-#+BEGIN_SRC
+#+BEGIN_SRC quote
 add the following location in a firefox bookmark:
 javascript:location.href="org-protocol:///capture?url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent(document.title||"[untitled page]")
 #+END_SRC
@@ -199,7 +197,7 @@ MimeType=x-scheme-handler/org-protocol;
 #+END_SRC
 
 *** xmonad
-#+BEGIN_SRC
+#+BEGIN_SRC conf
 update-desktop-database ~/.local/share/applications/
 #+END_SRC
 ** termite
@@ -212,7 +210,14 @@ background = rgba(63, 63, 63, 0.8)
 
 #+END_SRC
 ** cargo
-#+BEGIN_SRC :tangle ~/.cargo/config :mkdirp yes
+#+BEGIN_SRC conf :tangle ~/.cargo/config :mkdirp yes
 [registry]
 index = "git://mirrors.ustc.edu.cn/crates.io-index"
+#+END_SRC
+** picom
+#+BEGIN_SRC conf :tangle  ~/.cargo/config :mkdirp yes
+opacity-rule = [
+  "90:class_g = 'URxvt' && focused",
+  "60:class_g = 'URxvt' && !focused"
+];
 #+END_SRC
