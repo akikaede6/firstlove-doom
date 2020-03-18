@@ -1,5 +1,6 @@
 ;;; ~/.config/doom/autoload/ivy.el -*- lexical-binding: t; -*-
 
+;;;###autoload
 (defun counsel-yank-bash-history ()
   "Yank the bash history"
   (interactive)
