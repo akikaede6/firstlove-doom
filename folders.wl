@@ -14,4 +14,5 @@ NEWS {
     @rss-hash.xkcd "xkcd"
     @rss-hash.acgpiping "ACG"
     @rss-hash.moonlight "MoonLight"
+    @rss-hash.interrupt-memfault "interrupt-memfault"
 }
