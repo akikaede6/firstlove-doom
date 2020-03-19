@@ -100,7 +100,8 @@ Thumbs.db
 #+BEGIN_SRC python :tangle ~/.xonshrc
 aliases["p"]='proxychains'
 $PATH.append('~/.emacs.d/bin')
-$CMAKE_GENERATOR = "Ninja"
+$PROMPT = '{BOLD_GREEN}{user}@{hostname} {GREEN}[{cwd}]\n{BLUE}-> {BOLD_BLUE}%{NO_COLOR} '
+# $CMAKE_GENERATOR = "Ninja"
 $EDITOR = 'emacs'
 $XONSH_STORE_STDOUT = True
 #+END_SRC
