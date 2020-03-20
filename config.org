@@ -49,6 +49,8 @@ forward-socks5 / 127.0.0.1:1092 .
     proxy = http://127.0.0.1:8118
 [https]
     proxy = http://127.0.0.1:8118
+[am]
+        threeWay = true
 #+END_SRC
 ** gitignore
 #+BEGIN_SRC conf :tangle ~/.gitignore
@@ -121,7 +123,7 @@ patch:
 *** arch/manjaro
 fcitx-im fcitx-configtool fcitx-rime is necessary to use rime in pyim somehow.
 ** xmonad
-#+BEGIN_SRC conf :tangle ~/.xmonad/xmonad.hs
+#+BEGIN_SRC haskell :tangle ~/.xmonad/xmonad.hs
 import qualified XMonad.StackSet as W
 import XMonad.Actions.UpdateFocus
 import XMonad.Util.EZConfig
