@@ -103,7 +103,7 @@ Thumbs.db
 aliases["p"]='proxychains'
 $PATH.append('~/.emacs.d/bin')
 $PROMPT = '{BOLD_GREEN}{user} {YELLOW}[{cwd}]\n{BLUE}-> {BOLD_BLUE}%{NO_COLOR} '
-# $CMAKE_GENERATOR = "Ninja"
+$CMAKE_GENERATOR = "Unix Makefiles"
 $EDITOR = 'emacs'
 $XONSH_STORE_STDOUT = True
 #+END_SRC
