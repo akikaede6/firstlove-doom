@@ -106,6 +106,7 @@ $PROMPT = '{BOLD_GREEN}{user} {YELLOW}[{cwd}]\n{BLUE}-> {BOLD_BLUE}%{NO_COLOR} '
 $CMAKE_GENERATOR = "Unix Makefiles"
 $EDITOR = 'emacs'
 $XONSH_STORE_STDOUT = True
+$BROWSER = 'chromium'
 #+END_SRC
 ** rime
 some useful posts:
