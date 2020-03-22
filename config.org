@@ -25,6 +25,7 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime privoxy aspell-en v2
 #+END_SRC
 ** bashrc
 #+BEGIN_SRC conf :tangle ~/.bashrc
+export CMAKE_EXPORT_COMPILE_COMMANDS=1
 #+END_SRC
 
 ** tmux
@@ -307,6 +308,7 @@ $PROMPT = '{BOLD_GREEN}{user} {YELLOW}[{cwd}]\n{BLUE}-> {BOLD_BLUE}%{NO_COLOR} '
 $CMAKE_GENERATOR = "Unix Makefiles"
 $EDITOR = 'emacs'
 $XONSH_STORE_STDOUT = True
+$CMAKE_EXPORT_COMPILE_COMMANDS=1
 $BROWSER = 'chromium'
 #+END_SRC
 ** rime
