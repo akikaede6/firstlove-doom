@@ -86,3 +86,12 @@
 
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 
+(use-package! md4rd
+  :config
+  (add-hook 'md4rd-mode-hook 'md4rd-indent-all-the-lines)
+  (setq md4rd-subs-active '(emacs lisp+Common_Lisp prolog clojure))
+  (setq md4rd--oauth-access-token
+        "dX_aQaEZR4XL5AqLAe8KCih9WJs")
+  (setq md4rd--oauth-refresh-token
+        "dX_aQaEZR4XL5AqLAe8KCih9WJs")
+  (run-with-timer 0 3540 'md4rd-refresh-login))
