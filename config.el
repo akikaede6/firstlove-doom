@@ -83,3 +83,6 @@
  )
 
 (setq shell-file-name "/usr/bin/bash")
+
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+

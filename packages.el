@@ -47,3 +47,7 @@
 (package! shimbun)
 (package! wanderlust)
 (package! w3m)
+(package! lsp-docker)
+(package! nov)
+(package! md4rd)
+(package! shr-tag-pre-highlight)
