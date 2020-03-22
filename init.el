@@ -69,7 +69,7 @@
        ;;ansible
        debugger
        direnv
-       ;;docker
+       docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)
@@ -90,6 +90,7 @@
        :lang
        assembly
        (cc +lsp)
+       qt
        ;;crystal
        ;;clojure
        ;;(csharp +unity)
