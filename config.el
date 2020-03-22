@@ -95,3 +95,13 @@
   (setq md4rd--oauth-refresh-token
         "dX_aQaEZR4XL5AqLAe8KCih9WJs")
   (run-with-timer 0 3540 'md4rd-refresh-login))
+
+(use-package! shr-tag-pre-highlight
+  :after shr
+  :config
+  (add-to-list 'shr-external-rendering-functions
+               '(pre . shr-tag-pre-highlight))
+  (when (version< emacs-version "26")
+    (with-eval-after-load 'eww
+      (advice-add 'eww-display-html :around
+                  'eww-display-html--override-shr-external-rendering-functions))))
