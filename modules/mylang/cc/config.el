@@ -8,4 +8,10 @@
   (setq ccls-sem-highlight-method 'overlay)
   (ccls-use-default-rainbow-sem-highlight)
   (evil-set-initial-state 'ccls-tree-mode 'emacs)
-  )
+  (setq ccls-initialization-options
+              '(:compilationDatabaseDirectory "build"
+                                              :cache (:directory "/home/firstlove/tmp")
+                                              :index (:threads "16"))
+              ))
+
+
