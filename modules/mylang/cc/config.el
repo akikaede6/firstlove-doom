@@ -15,3 +15,4 @@
               ))
 
 
+                                        :clang (:extraArgs ["-I/usr/include/qt" ])
