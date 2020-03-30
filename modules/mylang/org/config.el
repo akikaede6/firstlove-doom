@@ -1,10 +1,13 @@
 ;;; mylang/org/config.el -*- lexical-binding: t; -*-
 
-(use-package! org-protocol
-  :config
+(after! org-protocol
   (add-to-list 'org-capture-templates
                '("w" "org-protocol" entry (file "~/projects/org/refile.org")
-                 "* TODO Review %a\n%U\n%:initial\n" :immediate-finish t))
+                 "* TODO Review %a\n%U\n%:initial\n" :immediate-finish t)
+               ;; '("j" "Journal" entry
+               ;;   (file+olp+datetree (journal-file-today))
+               ;;  "* %U %?\n%i\n%a" :prepend t)
+               )
   (setq org-protocol-default-template-key "w")
   )
 
