@@ -93,8 +93,7 @@
 
 (use-package! nov
   :defer t
-  :config
-  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+  :mode ("\\.epub\\'" . nov-mode)
   )
 (use-package! shr-tag-pre-highlight
   :after shr
@@ -105,3 +104,4 @@
     (with-eval-after-load 'eww
       (advice-add 'eww-display-html :around
                   'eww-display-html--override-shr-external-rendering-functions))))
+
