@@ -66,36 +66,36 @@
 
 (after! lsp-mode
   (lsp-register-client
-   (make-lsp-client :new-connection (lsp-tramp-connection "/home/firstlove/projects/github/ccls/build/ccls")
-                    :major-modes '(c++-mode)
-                    :remote? t
-                    :server-id 'ccls-remote))
+   (make-lsp-client
+    :new-connection (lsp-tramp-connection "ccls")
+    :major-modes '(c++-mode)
+    :remote? t
+    ))
+  (lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-tramp-connection "ccls")
+    :major-modes '(c-mode)
+    :remote? t
+    ))
   )
 
 (modify-syntax-entry ?_ "w")
 
 (after! wl
- (setq shimbun-rss-hash-group-path-alist
-      '(("xkcd" "https://xkcd.com/rss.xml")
-        ("acgpiping" "http://www.acgpiping.net/feed/")
-        ("interrupt-memfault" "https://interrupt.memfault.com/blog/feed.xml")
-        ("moonlight" "http://feed.williamlong.info/")))
- )
+  (setq shimbun-rss-hash-group-path-alist
+        '(("xkcd" "https://xkcd.com/rss.xml")
+          ("acgpiping" "http://www.acgpiping.net/feed/")
+          ("interrupt-memfault" "https://interrupt.memfault.com/blog/feed.xml")
+          ("moonlight" "http://feed.williamlong.info/")))
+  )
 
 (setq shell-file-name "/usr/bin/bash")
 
-(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
-
-(use-package! md4rd
+(use-package! nov
+  :defer t
   :config
-  (add-hook 'md4rd-mode-hook 'md4rd-indent-all-the-lines)
-  (setq md4rd-subs-active '(emacs lisp+Common_Lisp prolog clojure))
-  (setq md4rd--oauth-access-token
-        "dX_aQaEZR4XL5AqLAe8KCih9WJs")
-  (setq md4rd--oauth-refresh-token
-        "dX_aQaEZR4XL5AqLAe8KCih9WJs")
-  (run-with-timer 0 3540 'md4rd-refresh-login))
-
+  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+  )
 (use-package! shr-tag-pre-highlight
   :after shr
   :config
@@ -105,3 +105,7 @@
     (with-eval-after-load 'eww
       (advice-add 'eww-display-html :around
                   'eww-display-html--override-shr-external-rendering-functions))))
+
+(use-package! esup
+  ;; To use MELPA Stable use ":pin mepla-stable",
+  :commands (esup))
