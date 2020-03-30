@@ -474,12 +474,6 @@ active-opacity = 1;
 inactive-opacity = 0.9;
 frame-opacity = 1;
 inactive-opacity-override = false;
-opacity-rule = [
-	"100:class_g = 'Termite' && _NET_WM_STATE@:32a",
-	"95:class_g = 'Termite' && !_NET_WM_STATE@:32a",
-	"0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
-];
-
 # blur-background = true;
 # blur-background-frame = true;
 blur-background-fixed = false;
