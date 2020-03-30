@@ -1,9 +1,7 @@
 ;;; input/chinese/config.el -*- lexical-binding: t; -*-
 
 (use-package! liberime-config
-  :init
-  (add-hook 'liberime-after-start-hook
-            (lambda ()
+  :hook (liberime-after-start . (lambda ()
               (liberime-select-schema "luna_pinyin_simp")))
   )
 

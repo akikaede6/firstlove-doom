@@ -12,6 +12,7 @@
    :n "s" #'evil-snipe-s)))
 
 (use-package! eaf
+  :defer t
   :custom
   (eaf-find-alternate-file-in-dired t)
   :config
