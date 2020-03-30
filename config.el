@@ -105,7 +105,3 @@
     (with-eval-after-load 'eww
       (advice-add 'eww-display-html :around
                   'eww-display-html--override-shr-external-rendering-functions))))
-
-(use-package! esup
-  ;; To use MELPA Stable use ":pin mepla-stable",
-  :commands (esup))
