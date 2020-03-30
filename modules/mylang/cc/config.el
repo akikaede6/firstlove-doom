@@ -1,7 +1,7 @@
 ;;; mylang/cc/config.el -*- lexical-binding: t; -*-
 
 (use-package! ccls
-  :hook ((c-mode-local-vars c-mode c++-mode-local-vars objc-mode-local-vars) . (lambda ()(require'ccls)(lsp)))
+  :hook ((c-mode-local-vars c-mode c++-mode-local-vars objc-mode-local-vars) . (lambda ()(require'ccls)(lsp)(modify-syntax-entry ?_ "w")))
   :config
   (add-hook 'lsp-after-open-hook #'ccls-code-lens-mode)
   (setq ccls-executable "~/projects/github/ccls/build/ccls")
