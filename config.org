@@ -21,7 +21,7 @@
 ** presuite
 *** arch
 #+BEGIN_SRC bash
-sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime privoxy aspell-en v2ray
+sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime privoxy aspell-en v2ray tclap
 #+END_SRC
 ** bashrc
 #+BEGIN_SRC conf :tangle ~/.bashrc
