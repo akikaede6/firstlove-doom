@@ -39,4 +39,12 @@
      (:prefix ("c" . "en/decrypt")
        :n      "e" #'org-encrypt-entry
        :n "d" #'org-decrypt-entry)))))
+
+(after! org
+  (pushnew! org-capture-templates
+               '("j" "Journal" entry
+                 (file+olp+datetree get-journal-file-today)
+                 "* %U %?\n%i\n%a" :prepend t))
+
   (setf (alist-get 'file org-link-frame-setup) #'uos/org-open-other-workspace)
+  )

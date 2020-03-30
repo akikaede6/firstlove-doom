@@ -16,6 +16,7 @@
 ;;;###autoload
 (defun get-journal-file-today ()
   "Gets filename for today's journal entry."
+  (require 'org-journal)
   (let ((daily-name (format-time-string "%Y%m%d")))
     (expand-file-name (concat org-journal-dir daily-name))))
 
