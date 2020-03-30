@@ -7,7 +7,7 @@
        ;;ido
 
        :ui
-       deft
+       ;; deft
        doom
        doom-dashboard
        ;;doom-quit
@@ -28,11 +28,11 @@
        vi-tilde-fringe
        window-select
        workspaces
-       zen
+       ;; zen
 
        :input
        chinese
-       japanese
+       ;; japanese
 
        :editor
        ;; uos-keybinding
@@ -44,7 +44,7 @@
        lispy             ; vim for lisp, for people who dont like vim
        multiple-cursors  ; editing in many places at once
        ;;parinfer          ; turn lisp into python, sort of
-       rotate-text       ; cycle region at point between text candidates
+       ;; rotate-text       ; cycle region at point between text candidates
        snippets
        ;;word-wrap
 
@@ -84,7 +84,7 @@
        ;;prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
        ;;terraform         ; infrastructure as code
-       tmux              ; an API for interacting with tmux
+       ;; tmux              ; an API for interacting with tmux
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :lang
@@ -96,7 +96,7 @@
        ;;(csharp +unity)
        ;;common-lisp
        ;;coq
-       data
+       ;; data
        ;;(erlang +lsp)
        ;;elixir
        ;;elm
@@ -114,7 +114,7 @@
        ;; (lua +moonscript)
        markdown
        ;;nim
-       nix
+       ;; nix
        ;;ocaml
        (org +present +procotol +journal +brain)
        ;;perl
@@ -145,8 +145,8 @@
        dotfiles
        :lazycat
        eaf
-       awesome-tab
-       snails
+       ;; awesome-tab
+       ;; snails
        :mylang
        cc
        lsp
