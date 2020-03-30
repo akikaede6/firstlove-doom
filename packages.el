@@ -50,3 +50,10 @@
 (package! lsp-docker)
 (package! nov)
 (package! shr-tag-pre-highlight)
+
+(package! notdeft
+  :recipe
+  (
+   :host github
+   :repo "hasu/notdeft"
+   :files ("xapian" "*.el")))

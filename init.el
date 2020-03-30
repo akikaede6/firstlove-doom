@@ -8,6 +8,7 @@
 
        :ui
        ;; deft
+       notdeft
        doom
        doom-dashboard
        ;;doom-quit
