@@ -105,3 +105,5 @@
       (advice-add 'eww-display-html :around
                   'eww-display-html--override-shr-external-rendering-functions))))
 
+
+(set-frame-parameter nil 'alpha 85)
