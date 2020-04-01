@@ -425,12 +425,7 @@ index = "git://mirrors.ustc.edu.cn/crates.io-index"
 #+END_SRC
 ** picom
 #+BEGIN_SRC conf :tangle  ~/.config/picom.conf :mkdirp yes
-opacity-rule = [
-    "100:class_g = 'Chromium' && focused",
-    "60:class_g = 'Chromium' && !focused"
-]
-
- backend = "glx";
+backend = "glx";
 
 glx-no-stencil = true;
 glx-no-rebind-pixmap = true;
@@ -493,10 +488,19 @@ detect-client-leader = true;
 
 wintypes:
 {
-	tooltip = { opacity = 0.95; shadow = false; fade = true; focus = true; };
-	dock = { shadow = false; };
-	dnd = { shadow = false; };
+    tooltip =
+    {
+        # fade: Fade the particular type of windows.
+        fade = false;
+        # shadow: Give those windows shadow
+        shadow = false;
+        # opacity: Default opacity for the type of windows.
+        opacity = 0.85;
+        # focus: Whether to always consider windows of this type focused.
+        focus = true;
+    };
 };
+
 
 #+END_SRC
 ** wget
