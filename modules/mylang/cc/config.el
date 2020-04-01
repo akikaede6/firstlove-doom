@@ -10,7 +10,7 @@
   (evil-set-initial-state 'ccls-tree-mode 'emacs)
   (setq ccls-initialization-options
         '(:compilationDatabaseDirectory "build"
-                                        :clang (:extraArgs ["-I/usr/include/qt" ]
+                                        :clang (:extraArgs ["-I/usr/include/qt" "-I/usr/include/libdtk-2.1.1/DCore"]
                                                            :excludeArgs
                                                            ;; Linux's gcc options. See ccls/wiki
                                                            ["-falign-jumps=1" "-falign-loops=1" "-fconserve-stack" "-fmerge-constants" "-fno-code-hoisting" "-fno-schedule-insns" "-fno-var-tracking-assignments" "-fsched-pressure"
