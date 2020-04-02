@@ -41,6 +41,8 @@
    :repo "manateelazycat/aweshell"))
 
 (package! ccls)
+(package! lsp)
+(package! lsp-ui)
 (package! lastpass)
 (package! ox-mediawiki)
 (package! mediawiki)
@@ -57,3 +59,6 @@
    :host github
    :repo "hasu/notdeft"
    :files ("xapian" "*.el")))
+
+
+(package! cmake-mode)
