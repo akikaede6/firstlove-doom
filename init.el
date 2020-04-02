@@ -90,8 +90,9 @@
 
        :lang
        assembly
-       (cc +lsp)
+       (cc)
        qt
+       sml
        ;;crystal
        ;;clojure
        ;;(csharp +unity)
