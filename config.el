@@ -59,7 +59,13 @@
 
 
 (after! projectile
-  (add-to-list 'projectile-globally-ignored-directories ".ccls-cache"))
+  (add-to-list 'projectile-globally-ignored-directories ".ccls-cache")
+  (projectile-register-project-type 'cmake '("CMakeLists.txt")
+                                    :configure "cmake %s"
+                                    :compile "cmake --build Debug"
+                                    :test "ctest")
+
+  )
 
 (setq tramp-inline-compress-start-size nil)
 (setq tramp-copy-size-limit nil)
@@ -107,3 +113,6 @@
 
 
 (set-frame-parameter nil 'alpha 85)
+
+;; (add-to-list 'magic-mode-alist '("#include.*\\.h\s" . c++-mode))
+
