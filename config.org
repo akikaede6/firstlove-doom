@@ -27,6 +27,7 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime privoxy aspell-en v2
 #+BEGIN_SRC conf :tangle ~/.bashrc
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
 PATH=$PATH:~/.emacs.d/bin:~/.local/bin
+PATH=$PATH:~/.gem/ruby/2.7.0/bin/
 #+END_SRC
 
 ** tmux
@@ -233,6 +234,7 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
 esac
 
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
+PATH=$PATH:~/.gem/ruby/2.7.0/bin/
 #+END_SRC
 ** gitconfig
 #+BEGIN_SRC quote
@@ -306,6 +308,7 @@ Thumbs.db
 aliases["p"]='proxychains'
 $PATH.append('~/.emacs.d/bin')
 $PATH.append('~/.local/bin')
+$PATH.append('~/.gem/ruby/2.7.0/bin/')
 $PROMPT = '{BOLD_GREEN}{user} {YELLOW}[{cwd}]\n{BLUE}-> {BOLD_BLUE}%{NO_COLOR} '
 $CMAKE_GENERATOR = "Unix Makefiles"
 $EDITOR = 'emacs'
@@ -339,7 +342,7 @@ import XMonad
 myStartupHook :: X()
 myStartupHook = do
     -- background
-    spawn "bash ~/.screenlayout/arandr.sh"
+    -- spawn "bash ~/.screenlayout/arandr.sh"
     spawn "feh --bg-center ~/Downloads/road-landscape-nature-forest-39811.jpg  ~/Downloads/bird-s-eye-photography-of-mountain-1624496.jpg    ~/Downloads/photography-of-person-walking-on-road-1236701.jpg"
     -- autocutsel
     spawn "unclutter -grab &"
@@ -368,7 +371,7 @@ myKeys =
     ]
     ++
     [ (mask ++ "M-" ++ [key], screenWorkspace scr >>= flip whenJust (windows . action))
-         | (key, scr)  <- zip "weruio" [2,0,1,2,0,1] -- was [0..] *** change to match your screen order ***
+         | (key, scr)  <- zip "weruio" [1,2,0,2,0,1] -- was [0..] *** change to match your screen order ***
          , (action, mask) <- [ (W.view, "") , (W.shift, "S-")]
     ]
 #+END_SRC
@@ -550,3 +553,5 @@ Cabal < 1.24
 #+END_SRC
 
 但是替换仓库就行了，不需要全覆盖，所以不 tangle 了
+
+
