@@ -11,6 +11,7 @@
   (setq ccls-executable "~/projects/github/ccls/build/ccls")
   (setq ccls-sem-highlight-method 'overlay)
   (ccls-use-default-rainbow-sem-highlight)
+  (setq ccls-args '("--log-file=/tmp/ccls.log"))
   (evil-set-initial-state 'ccls-tree-mode 'emacs)
   (setq ccls-initialization-options
         '(:compilationDatabaseDirectory "build"
