@@ -1,13 +1,13 @@
 ;;; input/chinese/config.el -*- lexical-binding: t; -*-
 
-(use-package! liberime-config
+(use-package! liberime
   :hook (liberime-after-start . (lambda ()
               (liberime-select-schema "luna_pinyin_simp")))
   )
 
 
 (use-package! pyim
-  :after liberime-config
+  :after liberime
   :config
   (require 'liberime)
   (setq default-input-method "pyim")
