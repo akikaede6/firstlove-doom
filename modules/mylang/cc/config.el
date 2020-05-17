@@ -8,7 +8,7 @@
          )
   ;; :mode ("^D.*" . (lambda ()(require'ccls)(lsp)(modify-syntax-entry ?_ "w")))
   :config
-  (setq ccls-executable "~/projects/github/ccls/build/ccls")
+  (setq ccls-executable "/usr/bin/ccls")
   (setq ccls-sem-highlight-method 'overlay)
   (ccls-use-default-rainbow-sem-highlight)
   (setq ccls-args '("--log-file=/tmp/ccls.log"))
