@@ -38,7 +38,7 @@
        :editor
        ;; uos-keybinding
        (evil +everywhere)
-       file-templates
+       ;; file-templates
        fold              ; (nigh) universal code folding
        ;;objed
        format            ; automated prettiness
@@ -54,6 +54,7 @@
        electric          ; smarter, keyword-based electric-indent
        ;;ibuffer           ; interactive buffer management
        vc
+       (undo +tree)
 
        :term
        eshell            ; a consistent, cross-platform shell (WIP)
@@ -62,15 +63,15 @@
        vterm
 
        :checkers
-       syntax
-       spell
+       ;; syntax
+       ;; spell
        ;; grammar
 
        :tools
        ;;ansible
-       debugger
-       direnv
-       docker
+       ;; debugger
+       ;; direnv
+       ;; docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)
@@ -80,18 +81,18 @@
        ;;macos             ; MacOS-specific commands
        magit             ;
        ;;make              ; run make tasks from Emacs
-       pass                ; password manager for nerds
+       ;; pass                ; password manager for nerds
        pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
        ;;terraform         ; infrastructure as code
        ;; tmux              ; an API for interacting with tmux
-       ;;upload            ; map local to remote projects via ssh/ftp
+       upload            ; map local to remote projects via ssh/ftp
 
        :lang
-       assembly
+       ;; assembly
        (cc)
-       qt
+       ;; qt
        sml
        ;;crystal
        ;;clojure
@@ -99,7 +100,7 @@
        ;;common-lisp
        ;;coq
        ;; data
-       ;;(erlang +lsp)
+       (erlang +lsp)
        ;;elixir
        ;;elm
        emacs-lisp
@@ -125,12 +126,14 @@
        ;;purescript
        (python +lsp)
        ;;rest
-       ;;ruby
+       ;; (ruby +lsp)
        (rust +lsp)
        ;;scala
        sh
        ;;swift
        ;; web
+       yaml
+       json
 
        :email
        ;;(mu4e +gmail)       ; WIP
