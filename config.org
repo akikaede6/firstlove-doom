@@ -28,6 +28,8 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime privoxy aspell-en v2
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
 PATH=$PATH:~/.emacs.d/bin:~/.local/bin
 PATH=$PATH:~/.gem/ruby/2.7.0/bin/
+PATH=$PATH:~/.opam/default/bin/
+export NODE_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/
 #+END_SRC
 
 ** tmux
@@ -235,6 +237,8 @@ esac
 
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
 PATH=$PATH:~/.gem/ruby/2.7.0/bin/
+PATH=$PATH:~/.opam/default/bin/
+export NODE_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/
 #+END_SRC
 ** gitconfig
 #+BEGIN_SRC quote
@@ -318,6 +322,8 @@ $BROWSER = 'chromium'
 $LANG="en_US.UTF-8"
 $http_proxy="http://127.0.0.1:8118/"
 $https_proxy="https://127.0.0.1:8118/"
+$PATH.append('~/.opam/default/bin/')
+$NODE_MIRROR="https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/"
 #+END_SRC
 ** rime
 some useful posts:
