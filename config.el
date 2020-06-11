@@ -116,3 +116,4 @@
 
 ;; (add-to-list 'magic-mode-alist '("#include.*\\.h\s" . c++-mode))
 
+(remove-hook! (prog-mode text-mode conf-mode special-mode) #'hl-line-mode)
