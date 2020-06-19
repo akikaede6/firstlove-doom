@@ -63,3 +63,5 @@
 
 (package! cmake-mode)
 (package! anki-editor)
+
+(package! irony :disable t)
