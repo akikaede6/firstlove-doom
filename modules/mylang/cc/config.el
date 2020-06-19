@@ -3,7 +3,7 @@
 (use-package! ccls
   :init
   :hook (((c-mode-local-vars c-mode c++-mode-local-vars objc-mode-local-vars) . (lambda ()(require'ccls)(lsp)(modify-syntax-entry ?_ "w")))
-         (lsp-after-open . ccls-code-lens-mode)
+         ;; (lsp-after-open . ccls-code-lens-mode)
          (find-file . (lambda ()(require'ccls)(lsp)(modify-syntax-entry ?_ "w")(my-c++-mode-check-buffers)))
          )
   ;; :mode ("^D.*" . (lambda ()(require'ccls)(lsp)(modify-syntax-entry ?_ "w")))
