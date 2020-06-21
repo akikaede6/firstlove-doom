@@ -26,6 +26,8 @@ sudo pacman -S fcitx-im fcitx-configtool fcitx-rime librime privoxy aspell-en v2
 ** bashrc
 #+BEGIN_SRC conf :tangle ~/.bashrc
 export CMAKE_EXPORT_COMPILE_COMMANDS=1
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
 PATH=$PATH:~/.emacs.d/bin:~/.local/bin
 PATH=$PATH:~/.gem/ruby/2.7.0/bin/
 PATH=$PATH:~/.opam/default/bin/
@@ -226,7 +228,7 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
 #		ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 #  		ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 #     ;;
-  *)
+  ,*)
         RPROMPT='$(git_prompt_string)'
 		# Use autosuggestion
 		source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -239,6 +241,8 @@ export CMAKE_EXPORT_COMPILE_COMMANDS=1
 PATH=$PATH:~/.gem/ruby/2.7.0/bin/
 PATH=$PATH:~/.opam/default/bin/
 export NODE_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
 #+END_SRC
 ** gitconfig
 #+BEGIN_SRC quote
@@ -324,6 +328,8 @@ $http_proxy="http://127.0.0.1:8118/"
 $https_proxy="https://127.0.0.1:8118/"
 $PATH.append('~/.opam/default/bin/')
 $NODE_MIRROR="https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/"
+$GO111MODULE="on"
+$GOPROXY="https://goproxy.cn"
 #+END_SRC
 ** rime
 some useful posts:
