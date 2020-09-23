@@ -23,7 +23,7 @@
        (popup +all +defaults)
        ;; treemacs
        pretty-code
-       unicode
+       ;; unicode
        ;;tabs
        vc-gutter
        vi-tilde-fringe
@@ -119,7 +119,7 @@
        ;;nim
        ;; nix
        ;;ocaml
-       (org +present +procotol +journal +brain)
+       (org +present +procotol +journal +brain +pretty)
        ;;perl
        ;;php
        ;;plantuml

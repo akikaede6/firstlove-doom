@@ -19,7 +19,7 @@
 (add-to-list 'org-modules 'org-protocol t)
 
 ;;; :lang org
-(setq org-directory "~/projects/org/"
+(setq org-directory "~/github/repo/"
       org-archive-location (concat org-directory "archive/%s::")
       org-ellipsis " ▼ "
       org-bullets-bullet-list '("☰" "☱" "☲" "☳" "☴" "☵" "☶" "☷" "☷" "☷" "☷"))
